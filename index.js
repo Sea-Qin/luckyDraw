@@ -68,8 +68,10 @@ btnDom.addEventListener("click", () => {
     clearInterval(intervalTimer);
     showDom.setAttribute("class", "success");
     btnDom.innerHTML = "开始";
+    // 过滤已中奖人员
     const personId = showDom.getAttribute("personId");
     personList = personList.filter((person) => person.id !== Number(personId));
+    // 更新展示中奖名单
     const resultChild = document.createElement("div");
     resultChild.innerHTML = showDom.innerHTML;
     resultDom.appendChild(resultChild);
