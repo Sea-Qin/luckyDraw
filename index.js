@@ -47,7 +47,7 @@ const resultDom = document.getElementById("result-list");
 document.getElementById("result").setAttribute("style", "display: none");
 
 //生成随机数
-function getRandom = (() {
+const getRandom = (() => {
   let randomVal = new Date().getTime();
   return function () {
     randomVal ^= (randomVal << 13) & 0xffffffff;
