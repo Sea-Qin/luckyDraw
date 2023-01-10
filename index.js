@@ -46,6 +46,18 @@ const resultDom = document.getElementById("result-list");
 
 document.getElementById("result").setAttribute("style", "display: none");
 
+//随机数生成
+function getRandom = (()=> {
+  let randomVal = new Date().getTime();
+  return function () {
+    randomVal ^= (randomVal << 13) & 0xffffffff;
+    randomVal ^= randomVal >> 17;
+    randomVal ^= (randomVal << 5) & 0xffffffff;
+    randomVal = randomVal >>> 0; // 无符号右移位运算符向下取整
+    return randomVal / 2 ** 32;
+  };
+})();
+
 let intervalTimer;
 
 btnDom.addEventListener("click", () => {
