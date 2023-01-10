@@ -48,7 +48,7 @@ const resultDom = document.getElementById("result-list");
 
 document.getElementById("result").setAttribute("style", "display: none");
 
-//生成随机数
+//xorshift算法生成随机数
 const getRandom = (() => {
   let randomVal = new Date().getTime();
   return function () {
