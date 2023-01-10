@@ -52,9 +52,9 @@ document.getElementById("result").setAttribute("style", "display: none");
 const getRandom = (() => {
   let randomVal = new Date().getTime();
   return function () {
-    randomVal ^= (randomVal << 13) & 0xffffffff;
+    randomVal ^= randomVal << 13;
     randomVal ^= randomVal >> 17;
-    randomVal ^= (randomVal << 5) & 0xffffffff;
+    randomVal ^= randomVal << 5;
     randomVal = randomVal >>> 0; // 无符号右移位运算符向下取整
     return randomVal / 2 ** 32;
   };
