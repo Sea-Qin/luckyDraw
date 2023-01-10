@@ -3,10 +3,11 @@
   margin: 0;
 }
 .page {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   background-color: #45aaf2;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 20px;
   background-image: url("https://test-s1.ljcdn.com/ke_design_static/statics/like-background.d16f3f05.png");
 }
 .logo {
@@ -48,7 +49,7 @@
   width: 350px;
   background: #fff;
   border-radius: 4px;
-  margin: 40px auto;
+  margin: 30px auto;
   font-size: 30px;
   border: 3px dashed #f39c12;
 }
